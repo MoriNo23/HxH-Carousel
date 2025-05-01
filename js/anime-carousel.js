@@ -65,3 +65,47 @@ function nextPersonaje(index) {
   );
   document.body.style.backgroundImage = bgs;
 }
+
+// Lista de archivos FLAC (modifica con tus archivos)
+const songs = [
+  "./assets/music/Vanilla - Swept Away.flac",
+  "./assets/music/Yuki Ame - MAKOTO.flac",
+  "./assets/music/DIGITAL WAVES - Talkin.flac",
+  "./assets/music/essence - Marquinch Mogule.flac",
+];
+
+const audioPlayer = document.getElementById("audioPlayer");
+const songInfo = document.getElementById("songInfo");
+let currentSongIndex = 0;
+
+// Función para reproducir una canción
+function playSong(index) {
+  if (index >= 0 && index < songs.length) {
+    currentSongIndex = index;
+    audioPlayer.src = songs[index];
+    audioPlayer.play();
+    songInfo.textContent = songs[index].replace(".flac", "");
+  }
+}
+
+// Cuando termina una canción, pasa a la siguiente
+audioPlayer.addEventListener("ended", () => {
+  const nextIndex = (currentSongIndex + 1) % songs.length;
+  playSong(nextIndex);
+});
+
+// Reproducir la primera canción al cargar
+playSong(0);
+
+// Controles de teclado ocultos (opcional)
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space") {
+    audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause();
+  } else if (e.code === "ArrowRight") {
+    const nextIndex = (currentSongIndex + 1) % songs.length;
+    playSong(nextIndex);
+  } else if (e.code === "ArrowLeft") {
+    const prevIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+    playSong(prevIndex);
+  }
+});
