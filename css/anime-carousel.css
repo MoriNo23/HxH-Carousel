@@ -90,7 +90,7 @@ body {
 }
 /* imagen contenedor */
 .carousel-item-decoration {
-  background: url("/assets/wave-overlay-darkgray.svg");
+  background: url("assets/wave-overlay-darkgray.svg");
   width: 227px;
   height: 100%;
   display: flex;
