@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+:root {
+  --pagina-primario: #000000ff;
+  --pagina-segundario: #353535ff;
+  --character-primario: #2ecc71;
+  --character-segundario: #fbe072;
+}
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-image: url(../assets/image62193.svg);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*contenedores principales*/
+.carousel {
+  margin: 0 auto;
+  width: max-content;
+  color: var(--character-primario);
+  display: grid;
+  text-align: center;
+  grid-template-areas: "header header header" "button-left container button-right";
+}
+.carousel-container {
+  width: 956px;
+  height: 638px;
+  position: relative;
+  grid-area: container;
+  margin: 0 30px 0 30px;
+}
+/*slider*/
+
+.carousel-item {
+  width: 956px;
+  height: 638px;
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  justify-content: space-between;
+  z-index: 1;
+}
+.carousel-item--show {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 2;
+}
+/* texto */
+.name-anime {
+  font-weight: 700;
+  font-size: 50px;
+  color: var(--character-primario);
+  text-align: center;
+  margin-top: 20px;
+  grid-area: header;
+}
+.japanese-text {
+  writing-mode: vertical-rl;
+  align-self: baseline;
+}
+.carousel-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+}
+.carousel-heading {
+  font-size: 50px;
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 2px 2px var(--pagina-segundario);
+}
+.carousel-paragraph {
+  font-size: 20px;
+  font-weight: lighter;
+  text-shadow: 1px 1px #202020;
+  width: 358px;
+  margin-right: 100px;
+  color: var(--character-segundario);
+  font-style: italic;
+  text-shadow: 1px 1px black;
+  height: 70px;
+  text-align: justify;
+}
+/* imagen contenedor */
+.carousel-item-decoration {
+  background: url("/HxH-Carousel/assets/wave-overlay-darkgray.svg");
+  width: 227px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+/*Imagenes */
+.background-image-inner {
+  position: absolute;
+  z-index: -2;
+}
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  backdrop-filter: blur(20px);
+  mask: radial-gradient(#0000008c, white);
+}
+
+.character-portrait-container {
+  background-color: var(--pagina-primario);
+  position: relative;
+  right: 50%;
+  display: flex;
+  align-self: center;
+  border: 20px solid var(--pagina-segundario);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+/* boton */
+.carousel-button {
+  width: 50px;
+  height: 50px;
+  align-self: center;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.carousel-before {
+  grid-area: button-left;
+}
+.carousel-next {
+  grid-area: button-right;
+}
+.btn-animation-before {
+  background-color: var(--character-primario);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  box-shadow: 1px 2px 1px var(--pagina-segundario);
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  animation: button-left 1s steps(4) infinite;
+  -webkit-animation: button-left 1s steps(4) infinite;
+}
+.btn-animation-next {
+  background-color: var(--character-primario);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  box-shadow: 1px 2px 1px var(--pagina-segundario);
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  animation: button-right 1s steps(4) infinite;
+  -webkit-animation: button-right 1s steps(4) infinite;
+}
+
+@keyframes button-left {
+  0% {
+  }
+  100% {
+    background-color: transparent;
+    transform: translate(-150%) scale(0.3);
+    -webkit-transform: translate(-150%) scale(0.3);
+    -moz-transform: translate(-150%) scale(0.3);
+    -ms-transform: translate(-150%) scale(0.3);
+    -o-transform: translate(-150%) scale(0.3);
+  }
+}
+
+@keyframes button-right {
+  0% {
+  }
+  100% {
+    background-color: transparent;
+    transform: translate(150%) scale(0.3);
+    -webkit-transform: translate(150%) scale(0.3);
+    -moz-transform: translate(150%) scale(0.3);
+    -ms-transform: translate(150%) scale(0.3);
+    -o-transform: translate(150%) scale(0.3);
+  }
+}
