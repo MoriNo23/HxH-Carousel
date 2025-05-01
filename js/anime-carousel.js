@@ -68,10 +68,10 @@ function nextPersonaje(index) {
 
 // Lista de archivos FLAC (modifica con tus archivos)
 const songs = [
-  "./assets/music/Vanilla - Swept Away.flac",
-  "./assets/music/Yuki Ame - MAKOTO.flac",
-  "./assets/music/DIGITAL WAVES - Talkin.flac",
-  "./assets/music/essence - Marquinch Mogule.flac",
+  "/assets/music/Vanilla - Swept Away.flac",
+  "/assets/music/Yuki Ame - MAKOTO.flac",
+  "/assets/music/DIGITAL WAVES - Talkin.flac",
+  "/assets/music/essence - Marquinch Mogule.flac",
 ];
 
 const audioPlayer = document.getElementById("audioPlayer");
