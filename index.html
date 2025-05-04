@@ -6,97 +6,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HxH Carrousel</title>
   <link rel="stylesheet" href="./css/anime-carousel.css">
+  <script src="js/loading.js"></script>
 </head>
 
 <body>
-  <div class="carousel">
-    <h1 class="name-anime">Hunter x Hunter</h1>
-    <div class="carousel-button carousel-before">
-      <div class="btn-animation-before"></div>
-    </div>
-    <div class="carousel-container">
-      <div class="carousel-item carousel-item--show" data-id="1">
-        <span class="japanese-text">こんにちは</span>
-        <div class="carousel-text-container">
-          <h2 class="carousel-heading">Gon Freecss</h2>
-          <p class="carousel-paragraph">—No es imposible, solo es que nadie lo ha hecho todavía. ¡Pero yo lo haré!
-            ¡Porque quiero ser un Cazador más que nadie!</p>
-        </div>
-        <img src="./assets/backgroundinner.png" alt="bg-inner" class="background-image-inner">
-        <div class="carousel-item-decoration">
-          <div class="character-portrait-container">
-            <img src="./assets/gon_freecss-character-portrait.png" alt="Gon" class="portrait">
-          </div>
-
-        </div>
+  <div class="carousel-container">
+    <button class="carousel-arrow arrow-before carousel-outer--show">&#10094;</button>
+    <div class="carousel">
+      <div class="arrows-inner">
+        <button class="carousel-arrow arrow-before carousel-arrow--show">&#10094;</button>
+        <button class="carousel-arrow arrow-next carousel-arrow--show">&#10095;</button>
       </div>
-      <div class="carousel-item" data-id="2">
-        <span class="japanese-text">キルア・ゾルディック</span>
-        <div class="carousel-text-container">
-          <h2 class="carousel-heading">Killua Zoldyck</h2>
-          <p class="carousel-paragraph">—Si no arriesgas, no puedes crear un futuro… ¡Pero si arriesgas tu vida,
-            entonces no habrá futuro!</p>
-        </div>
-        <img src="./assets/killuaassets/bg.png" alt="bg-inner" class="background-image-inner">
-        <div class="carousel-item-decoration">
-          <div class="character-portrait-container">
-            <img src="./assets/killuaassets/killuaportrait.png" alt="killua" class="portrait">
+      <div class="carousel-item">
+        <header>
+          <img src="./assets/slider_overlay2-2.svg" alt="overlay" class="overlay2" class="overlay2">
+          <img src="./assets/slider_overla2-1.svg" alt="overlay" class="overlay" class="overlay">
+          <img src="./assets/gon.png" alt="gonportrait" class="overlay-icon">
+        </header>
+        <section class="text-container text--show">
+          <span>ゴン＝フリークス</span>
+          <div class="text">
+            <h2>Gon Freecss</h2>
+            <p>—No es imposible, solo es que nadie lo ha hecho todavía. ¡Pero yo lo haré! ¡Porque quiero ser un Cazador
+              más que nadie! </p>
           </div>
-
-        </div>
-      </div>
-      <div class="carousel-item" data-id="3">
-        <span class="japanese-text">クラピカ・クルタ</span>
-        <div class="carousel-text-container">
-          <h2 class="carousel-heading">Kurapika Kurta</h2>
-          <p class="carousel-paragraph">—Mis ojos escarlata juran venganza... hasta que la Brigada Fantasma desaparezca
-            de este mundo</p>
-        </div>
-        <img src="./assets/kurapika/innerkurapika.png" alt="bg-inner" class="background-image-inner">
-        <div class="carousel-item-decoration">
-          <div class="character-portrait-container">
-            <img src="./assets/kurapika/portaitkurapika.png" alt="kurapika" class="portrait">
+        </section>
+        <section class="text-container">
+          <span>キルア＝ゾルディック</span>
+          <div class="text">
+            <h2>Killua Zoldyck</h2>
+            <p>—Si no arriesgas, no puedes crear un futuro… ¡Pero si arriesgas tu vida, entonces no habrá futuro!</p>
           </div>
-
-        </div>
-      </div>
-      <div class="carousel-item" data-id="4">
-        <span class="japanese-text">レオリオ＝パラディナイト</span>
-        <div class="carousel-text-container">
-          <h2 class="carousel-heading" style="transform: translateX(-50px);">Leorio Paradinight</h2>
-          <p class="carousel-paragraph">—¡No soy solo un médico... soy un hombre que golpea primero!</p>
-        </div>
-        <img src="./assets/leorio/bg_image67800_Leorio.png" alt="bg-inner" class="background-image-inner">
-        <div class="carousel-item-decoration">
-          <div class="character-portrait-container">
-            <img src="./assets/leorio/bg_image77618_Leorio.png" alt="killua" class="portrait">
+        </section>
+        <section class="text-container">
+          <span>キルア＝ゾルディック</span>
+          <div class="text">
+            <h2>Kurapika</h2>
+            <p>—Mis ojos escarlata juran venganza... hasta que la Brigada Fantasma desaparezca de este mundo</p>
           </div>
-
-        </div>
-      </div>
-      <div class="carousel-item" data-id="5">
-        <span class="japanese-text">ヒソカ＝モロウ</span>
-        <div class="carousel-text-container">
-          <h2 class="carousel-heading">Hisoka Morow</h2>
-          <p class="carousel-paragraph">—¡Qué delicia... tu desesperación! Es el mejor condimento para la victoria
-          </p>
-        </div>
-        <img src="./assets/hisoka/hisokamorow_image105190.png" alt="bg-inner" class="background-image-inner">
-        <div class="carousel-item-decoration">
-          <div class="character-portrait-container">
-            <img src="./assets/hisoka/hisokamorow_image98685.png" alt="killua" class="portrait">
+        </section>
+        <section class="text-container">
+          <span>レオリオ＝パラディナイト</span>
+          <div class="text">
+            <h2>Leorio Paradinight</h2>
+            <p>—¡No soy solo un médico... soy un hombre que golpea primero!</p>
           </div>
-
-        </div>
+        </section>
+        <section class="text-container">
+          <span>キルア＝ゾルディック</span>
+          <div class="text">
+            <h2>Hisoka Morow</h2>
+            <p>—¡Qué delicia... tu desesperación! Es el mejor condimento para la victoria </p>
+          </div>
+        </section>
       </div>
     </div>
-    <div class="carousel-button carousel-next">
-      <div class="btn-animation-next"></div>
-    </div>
+    <button class="carousel-arrow arrow-next carousel-outer--show">&#10095;</button>
   </div>
-  <audio id="audioPlayer"></audio>
-  <div id="songInfo"></div>
-  <script src="./js/anime-carousel.js"></script>
+  <script src="js/anime-carousel.js"></script>
 </body>
 
 </html>
