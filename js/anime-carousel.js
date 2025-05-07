@@ -2,41 +2,41 @@ const personajes = {
   gon: {
     primario: "#2ecc71",
     segundario: "#fbe072",
-    outerbg: "url(assets/gonpattern.png)",
-    innerbg: "url(assets/backgroundinner.png)",
-    portrait: "./assets/gon.png",
+    outerbg: "url(assets/characters/gon/gonpattern.png)",
+    innerbg: "url(assets/characters/gon/backgroundinner.png)",
+    portrait: "./assets/characters/gon/gon.png",
   },
   killua: {
     primario: "#FFFFFF",
     segundario: "#2196F3",
-    outerbg: "url(assets/killua/killua_pattern.png)",
-    innerbg: "url(assets/killua/killua_bg.png)",
-    portrait: "./assets/killua/killua_portrait.png",
+    outerbg: "url(assets/characters/killua/killua_pattern.png)",
+    innerbg: "url(assets/characters/killua/killua_bg.png)",
+    portrait: "./assets/characters/killua/killua.png",
   },
   kurapika: {
     primario: "#F44336",
     segundario: "#000000",
-    outerbg: "url(assets/kurapika/kurapattern.png)",
-    innerbg: "url(assets/kurapika/kurapika_bg.png)",
-    portrait: "./assets/kurapika/kurapika_portrait.png",
+    outerbg: "url(assets/characters/kurapika/kura_pattern.png)",
+    innerbg: "url(assets/characters/kurapika/kurapika_bg.png)",
+    portrait: "./assets/characters/kurapika/kurapika.png",
   },
   leorio: {
     primario: "#3F51B5",
     segundario: "#8BC34A",
-    outerbg: "url(assets/leorio/leorio_pattern.png)",
-    innerbg: "url(assets/leorio/leorio_bg.png)",
-    portrait: "./assets/leorio/leorio_portrait.png",
+    outerbg: "url(assets/characters/leorio/leorio_pattern.png)",
+    innerbg: "url(assets/characters/leorio/leorio_bg.png)",
+    portrait: "./assets/characters/leorio/leorio.png",
   },
   hisoka: {
     primario: "#E91E63",
     segundario: "#FFEB3B",
-    outerbg: "url(assets/hisoka/hisoka_pattern.png)",
-    innerbg: "url(assets/hisoka/hisoka_bg.png)",
-    portrait: "./assets/hisoka/hisoka_portrait.png",
+    outerbg: "url(assets/characters/hisoka/hisoka_pattern.png)",
+    innerbg: "url(assets/characters/hisoka/hisoka_bg.png)",
+    portrait: "./assets/characters/hisoka/hisoka.png",
   },
 };
 
-const carouselItems = document.querySelector(".carousel-item");
+var carouselItems = document.querySelector(".carousel-item");
 const btnBefore = document.querySelectorAll(".arrow-before");
 const btnNext = document.querySelectorAll(".arrow-next");
 const text = document.querySelectorAll(".text-container");
